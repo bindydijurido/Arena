@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * otherwise test will fail. When test finish driver will quit and close the browser.
  *
  *
- *for Windows systems replace 30 line with this one below:
+ *for Windows systems replace 32 line with this one below:
  *
  *System.setProperty("webdriver.chrome.driver", "libs/chromedriver.exe");
  *
