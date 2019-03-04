@@ -2,6 +2,7 @@
 Web automated test with java+selenium+webdriver+jUnit
 
 # Go directly to Tests
+https://github.com/bindydijurido/Arena/tree/master/src/test/java/tests
 # 
 
 # Hello guys!
