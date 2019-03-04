@@ -25,7 +25,7 @@ Don't worry about libraries - everything is in gradle : )
 https://github.com/bindydijurido/Arena/blob/master/src/test/java/driver/Root.java
 
 **!Please remember to place your Chrome Webdriver into libs section:**
-https://github.com/bindydijurido/Arena/blob/master/README.md
+https://github.com/bindydijurido/Arena/tree/master/libs
 #
 
 **Enjoy and feel free to comment everything you want :)**
