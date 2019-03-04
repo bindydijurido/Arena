@@ -9,7 +9,7 @@ import static math_task.MathTaskActions.*;
 public class CrazyMathTaskTest extends CommonUseMethodsAndActions {
 
     /**
-     * This is Task 4 Test. You can read what's going on easily - just read the code below}.
+     * This is Task 4 Test. You can read what's going on easily - just read the code below.
      * What's important here - you can change/provide any data that you want to test. For more info lurk into one of methods below.
      * Enjoy.
      *
