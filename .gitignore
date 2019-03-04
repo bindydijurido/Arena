@@ -1,0 +1,14 @@
+/bin
+/.gradle/
+/build/
+*.css
+*.js
+*.html
+*.idx
+*.bin
+*.exe
+*.class
+*.lock
+*.lock
+*.bin
+.project
