@@ -11,8 +11,8 @@ public class SearchEngineTest extends CommonUseMethodsAndActions {
 
     /**
      * This is Task 1 and 2 Test.
-     * Important! - check how this test especially here:
-     * @see SearchEngineActions#checkIfProductPriceIsLessThanQuantity() and read javadoc about this method.
+     * Important! - check how this test works especially here:
+     * @see SearchEngineActions#checkIfProductPriceIsLessThanQuantity()
      *
      * I assumed, that Task 1 is covering with Task 2 - that's why I decided to split those two into one test method.
      * If you want to test Task 1 only just use first two methods in //When section.
