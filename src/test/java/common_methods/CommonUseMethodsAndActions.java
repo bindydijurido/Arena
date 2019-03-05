@@ -74,8 +74,8 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method is collecting prices data from search results and adding those into {@link #PRODUCT_PRICES} list.
-     * When this method is called {@link #PRODUCT_PRICES} list is dropped and fulfill with new data once again.
+     * This method is collecting prices data from search results and add those into {@link #PRODUCT_PRICES} list.
+     * When this method is called {@link #PRODUCT_PRICES} list is dropped out and fulfill with new data once again.
      */
 
     protected static void dumpProductPricesToList() {
