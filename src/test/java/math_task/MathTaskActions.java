@@ -13,7 +13,7 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
     /**
      * This method specify a variable which contains First Product Price from Search Result {@link #viewProductNameList()}.
      * Unfortunately Selenium can read values only in String form, that's why Parsing Methods are in use here.
-     * Additionally Product Prices here contains price unit - that's why I decided to use split here.
+     * Additionally Product Prices from WebElement contains price unit - that's why I decided to use split here.
      */
 
     private static final double FIRST_PRODUCT_PRICE = Double.parseDouble(viewProductPriceList()
@@ -66,7 +66,7 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is checking if First Product Price is Supported by {@link #firstValue} and {@link #secondValue}.
+     * This method tests if First Product Price is Supported by {@link #firstValue} and {@link #secondValue}.
      * If not Test will fail.
      */
 
