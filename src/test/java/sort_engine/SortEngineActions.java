@@ -14,8 +14,8 @@ public class SortEngineActions extends CommonUseMethodsAndActions {
 
     /**
      * This method handling dropDownMenu on results page. I am not satisfied from this solution but it works here perfectly.
-     * Unfortunately I couldn't use here Selenium WebDriver DropDownMenu handling methods here, because implementation of
-     * this one is not a typical <select> </select> html element. What's important here - you still has possibility to test
+     * Unfortunately I couldn't use Selenium WebDriver DropDownMenu handling methods here, because implementation of
+     * this one is not a typical <select> </select> html element. What's important here - you still have possibility to test
      * any sorting functionality available:
      *
      * @param category specify which sorting method you want to use. Available sorting methods are:
