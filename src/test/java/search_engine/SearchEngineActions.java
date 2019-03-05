@@ -12,9 +12,9 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     private static int productsOnFirstPage = 0;
 
     /**
-     * This method is displaying Product Name in console log. As you can see Product Name is getting from {@link #viewProductNameList()}.
+     * This method is displays Product Name in console log. As you can see Product Name is getting from {@link #viewProductNameList()}.
      *
-     * @param productNumber specify which Product Name you want to print on console. If you want to know the list range
+     * @param productNumber specify which Product Name you want to print out on console. If you want to know list range -
      *                      try with list.size() in {@link #displayProductsQuantity()} method.
      */
 
@@ -23,9 +23,9 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is displaying Product Price in console log. As you can see Product Name is getting from {@link #viewProductPriceList()}.
+     * This method displays Product Price in console log. As you can see Product Name is getting from {@link #viewProductPriceList()}.
      *
-     * @param productNumber specify which Product Name you want to print on console. If you want to know the list range
+     * @param productNumber specify which Product Name you want to print out on console. If you want to know list range -
      *                      try with list.size() in {@link #displayProductsQuantity()} method.
      */
 
@@ -34,9 +34,9 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is displaying an amount of available products on single results page.
-     * {@value #productsOnFirstPage} contains number of elements/products on a single page. In this test method log will print
-     * an amount of elements just on first page but there is no objection to use this method on every page results page.
+     * This method displays an amount of available products on single results page.
+     * {@value #productsOnFirstPage} contains a number of elements/products on a single one page. In this test method log will print out
+     * an amount of Web Elements just on the First Page but there is no objection to use this method on every results page you want.
      */
 
     public static void displayProductsQuantity() {
@@ -82,8 +82,8 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method assertResults before proper test will finalize it's assumptions. Why I did it? I like to print on console
-     * log which contains clear, easy to read feedback to developer - Test Passed or Not with small explanation.
+     * This method assertResults before proper test will finalize it's assumptions. Why I did it? I like to print out on console
+     * log clear, easy to read feedback to developer.
      * jUnit Framework doesn't provide this type of feedback very often. Additionally {@value #isProductPriceHigherThanQuantity}
      * stores necessary value which is using in jUnit AssertTrue method.
      */
