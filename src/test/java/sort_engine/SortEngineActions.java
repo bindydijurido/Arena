@@ -13,7 +13,7 @@ public class SortEngineActions extends CommonUseMethodsAndActions {
     public static boolean isOrdered = false;
 
     /**
-     * This method handling dropDownMenu on results page. I am not satisfied from with solution but it works here perfectly.
+     * This method handling dropDownMenu on results page. I am not satisfied with solution but it works here perfectly.
      * Unfortunately I couldn't use Selenium WebDriver DropDownMenu handling methods here, because implementation of
      * this one is not a typical <select> </select> html element. What's important here - you still have possibility to test
      * any sorting functionality available:
