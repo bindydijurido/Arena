@@ -35,7 +35,7 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
 
     /**
      * This method displays an amount of available products on single results page.
-     * {@value #productsOnFirstPage} contains a number of elements/products on a single one page. In this test method log will print out
+     * {@value #productsOnFirstPage} contains a number of elements/products on a single page. In this test method log will print out
      * an amount of Web Elements just on the First Page but there is no objection to use this method on every results page you want.
      */
 
