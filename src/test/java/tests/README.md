@@ -1,3 +1,7 @@
+# Tasks:
+
+![alt text](https://raw.githubusercontent.com/bindydijurido/Arena/master/src/test/java/tests/task_description.png)
+
 #
 
 #TC Examples can be find below:
