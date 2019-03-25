@@ -4,7 +4,7 @@
 
 #
 
-#TC Examples can be find below:
+# TC Examples can be find below:
 
 **Test Cases for Search Functionality**
 
