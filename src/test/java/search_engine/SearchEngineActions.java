@@ -2,8 +2,7 @@ package search_engine;
 
 import common_methods.CommonUseMethodsAndActions;
 
-import java.util.concurrent.TimeUnit;
-
+import static java.util.concurrent.TimeUnit.SECONDS;
 import static search_engine.SearchEngineLocators.*;
 
 public class SearchEngineActions extends CommonUseMethodsAndActions {
@@ -68,7 +67,7 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
 
         let(paginationInput()).clear();
         let(paginationInput()).sendKeys(String.valueOf(totalPagesFound));
-        TimeUnit.SECONDS.sleep(1);
+        SECONDS.sleep(1);
 
         int totalProductsFound = (totalPagesFound * productsOnFirstPage) - viewProductNameList().size();
 

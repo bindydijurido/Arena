@@ -4,8 +4,7 @@ import com.google.common.collect.Ordering;
 import common_methods.CommonUseMethodsAndActions;
 import org.openqa.selenium.By;
 
-import java.util.concurrent.TimeUnit;
-
+import static java.util.concurrent.TimeUnit.SECONDS;
 import static sort_engine.SortEngineLocators.dropDownMenu;
 
 public class SortEngineActions extends CommonUseMethodsAndActions {
@@ -26,7 +25,7 @@ public class SortEngineActions extends CommonUseMethodsAndActions {
     public static void pickFromDropDownMenu(String category) throws InterruptedException {
         let(dropDownMenu()).click();
         let(By.linkText(category)).click();
-        TimeUnit.SECONDS.sleep(1);
+        SECONDS.sleep(1);
     }
 
     /**
