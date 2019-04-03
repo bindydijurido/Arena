@@ -11,9 +11,9 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
     public static boolean isSupported;
 
     /**
-     * This method specify a variable which contains First Product Price from Search Result {@link #viewProductNameList()}.
-     * Unfortunately Selenium can read values only in String form, that's why Parsing Methods are in use here.
-     * Additionally Product Prices from WebElement contains price unit - that's why I decided to use split here.
+     * This method specifies a variable which contains First Product Price from Search Result {@link #viewProductNameList()}.
+     * Unfortunately, Selenium can read values only in String form, that's why Parsing Methods are used here.
+     * Additionally, Product Prices from WebElement contains price unit - that's why I decided to use split here.
      */
 
     private static final double FIRST_PRODUCT_PRICE = Double.parseDouble(viewProductPriceList()
@@ -22,11 +22,11 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
             .split(" ")[0]);
 
     /**
-     * This method is checking if First Product Price is Lower than:
+     * This method checks if First Product Price is lower than value (described below).
      *
-     * @param value specify an amount of Polish Zloty that you want to compare with {@link #FIRST_PRODUCT_PRICE}. You can provide here
-     *              anything but remember that value should be double or Integer type.
-     *              Depending on the results this method will print on console first 5 results from {@link #PRODUCT_PRICES} list or not
+     * @param value specify the amount of Polish Zloty that you want to compare with {@link #FIRST_PRODUCT_PRICE}. You can provide
+     *              anything here but remember that value should be of type Double or Integer.
+     *              Depending on the results, this method will print first 5 results in console from {@link #PRODUCT_PRICES} list or not.
      */
 
     public static void checkIfFirstPriceIsLowerThan(double value) {
@@ -44,11 +44,11 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is checking if First Product Price is Higher than:
+     * This method checks if First Product Price is higher than value (described below).
      *
-     * @param value specify an amount of Polish Zloty that you want to compare with {@link #FIRST_PRODUCT_PRICE}. You can provide here
-     *              anything but remember that value should be double or Integer type.
-     *              Depending on the results this method will print on console difference between The Higher and The Lower Prices
+     * @param value specify the amount of Polish Zloty that you want to compare with {@link #FIRST_PRODUCT_PRICE}. You can provide
+     *              anything here but remember that value should be of type Double or Integer.
+     *              Depending on the results, this method will print a difference in console between The Higher and The Lower Prices
      *              found in Search Results in {@link #PRODUCT_PRICES} list.
      */
 
@@ -66,15 +66,15 @@ public class MathTaskActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method tests if First Product Price is Supported by {@link #firstValue} and {@link #secondValue}.
-     * If not Test will fail.
+     * This method tests if First Product Price is supported by {@link #firstValue} and {@link #secondValue}.
+     * If not, test will fail.
      */
 
     public static void checkIfPriceIsSupported() {
         isSupported = FIRST_PRODUCT_PRICE <= firstValue || FIRST_PRODUCT_PRICE >= secondValue;
 
         if (isSupported) {
-            log("First Price is supported at least by one of entry Values - Test passed");
+            log("First Price is supported by at least one of entry Values - Test passed");
         } else {
             log("First Price is not supported by any of entry Values - Test failed");
         }

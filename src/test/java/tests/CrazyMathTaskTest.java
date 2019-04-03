@@ -1,10 +1,10 @@
 package tests;
 
 import common_methods.CommonUseMethodsAndActions;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static math_task.MathTaskActions.*;
+import static org.junit.Assert.assertTrue;
 
 public class CrazyMathTaskTest extends CommonUseMethodsAndActions {
 
@@ -32,6 +32,6 @@ public class CrazyMathTaskTest extends CommonUseMethodsAndActions {
         checkIfPriceIsSupported();
 
         //Finalize
-        Assert.assertTrue(isSupported);
+        assertTrue(isSupported);
     }
 }

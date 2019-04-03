@@ -1,9 +1,9 @@
 package tests;
 
 import common_methods.CommonUseMethodsAndActions;
-import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
 import static sort_engine.SortEngineActions.*;
 
 public class SortingEngineTest extends CommonUseMethodsAndActions {
@@ -30,7 +30,7 @@ public class SortingEngineTest extends CommonUseMethodsAndActions {
         checkPriceAscSortFunctionality();
 
         //Finalize
-        Assert.assertTrue(isOrdered);
+        assertTrue(isOrdered);
         log("Test passed - prices are sorted properly");
     }
 }

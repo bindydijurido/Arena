@@ -3,21 +3,18 @@ package search_engine;
 import common_methods.CommonUseMethodsAndActions;
 import org.openqa.selenium.By;
 
+import static org.openqa.selenium.By.*;
+
 public class SearchEngineLocators extends CommonUseMethodsAndActions {
 
-    public static By searchBar() {
-        return By.id("search-typeahead");
-    }
+    public static By searchBar() { return id("search-typeahead"); }
 
-    public static By searchSubmit() {
-        return By.className("search-submit");
-    }
+    public static By searchSubmit() { return className("search-submit"); }
 
     static By paginationInput() {
-        return By.className("listing-pagination__input");
+        return className("listing-pagination__input");
     }
 
-    static By numberFoundPages() {
-        return By.xpath("//*[@id=\"listing-app\"]/div[1]/div[2]/div[2]/div[3]/div[2]/div[2]/div[2]/span");
+    static By numberFoundPages() { return xpath("//*[@id=\"listing-app\"]/div[1]/div[2]/div[2]/div[3]/div[2]/div[2]/div[2]/span");
     }
 }

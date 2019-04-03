@@ -13,15 +13,15 @@ import static search_engine.SearchEngineLocators.searchSubmit;
 public class CommonUseMethodsAndActions extends Root {
 
     /**
-     * This list is using for collecting data about product prices from Search Results.
+     * This list is used for collecting data about product prices from Search Results.
      */
 
     protected static final LinkedList<String> PRODUCT_PRICES = new LinkedList<>();
 
     /**
-     * This method simplify printing any data on console. It is much easier to write a code just with one word.
+     * This method simplifies printing any data on console. It is much easier to write code with just one word.
      *
-     * @param text specify what data you want to print on console.
+     * @param text specify what data you want to print in console.
      */
 
     protected static void log(String text) {
@@ -29,7 +29,7 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method simplify searching for elements via Selenium WebDriver. It is much easier to write a code just with one word.
+     * This method simplifies searching for elements via Selenium WebDriver. It is much easier to write code with just one word.
      *
      * @param locator specify which WebElement you want to find.
      */
@@ -39,7 +39,7 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method opens main page for tests.
+     * This method opens the main page for tests.
      */
 
     protected static void openArenaPage() {
@@ -47,7 +47,7 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method is collecting Product Names from Search Results by class name.
+     * This method collects Product Names from Search Results found by class name.
      */
 
     protected static List<WebElement> viewProductNameList() {
@@ -55,7 +55,7 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method is collecting Product Prices from Search Results by class name.
+     * This method collects Product Prices from Search Results found by class name.
      */
 
     protected static List<WebElement> viewProductPriceList() {
@@ -63,7 +63,7 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method provide item of interest into Search Bar.
+     * This method provides item of interest into Search Bar.
      *
      * @param productName specify a word that you want to search for during test.
      */
@@ -74,8 +74,8 @@ public class CommonUseMethodsAndActions extends Root {
     }
 
     /**
-     * This method is collecting prices data from search results and add those into {@link #PRODUCT_PRICES} list.
-     * When this method is called {@link #PRODUCT_PRICES} list is dropped out and fulfill with new data once again.
+     * This method collects prices data from search results and adds those into {@link #PRODUCT_PRICES} list.
+     * When this method is called {@link #PRODUCT_PRICES} list is dropped out and filled with new data once again.
      */
 
     protected static void dumpProductPricesToList() {

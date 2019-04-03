@@ -12,10 +12,10 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     private static int productsOnFirstPage = 0;
 
     /**
-     * This method is displays Product Name in console log. As you can see Product Name is getting from {@link #viewProductNameList()}.
+     * This method displays Product Name in console log. As you can see, Product Name is taken from {@link #viewProductNameList()}.
      *
-     * @param productNumber specify which Product Name you want to print out on console. If you want to know list range -
-     *                      try with list.size() in {@link #displayProductsQuantity()} method.
+     * @param productNumber specify which Product Name you want to print out in console. If you want to know list's range -
+     *                      try using list.size() on {@link #displayProductsQuantity()} method.
      */
 
     public static void displayProductName(int productNumber) {
@@ -23,10 +23,10 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method displays Product Price in console log. As you can see Product Name is getting from {@link #viewProductPriceList()}.
+     * This method displays Product Price in console log. As you can see, Product Name is taken from {@link #viewProductPriceList()}.
      *
-     * @param productNumber specify which Product Name you want to print out on console. If you want to know list range -
-     *                      try with list.size() in {@link #displayProductsQuantity()} method.
+     * @param productNumber specify which Product Name you want to print out in console. If you want to know list's range -
+     *                      try using list.size() on {@link #displayProductsQuantity()} method.
      */
 
     public static void displayProductPrice(int productNumber) {
@@ -34,9 +34,9 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method displays an amount of available products on single results page.
+     * This method displays the amount of available products on single results page.
      * {@value #productsOnFirstPage} contains a number of elements/products on a single page. In this test method log will print out
-     * an amount of Web Elements just on the First Page but there is no objection to use this method on every results page you want.
+     * the amount of Web Elements just on the First Page but there is no objection to use this method on every results page you want.
      */
 
     public static void displayProductsQuantity() {
@@ -45,17 +45,17 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is checking if Product Price in GROSZ is less than Total Products Found by Selenium Webdriver. What's great here is
+     * This method checks if Product Price in GROSZ is lower than Total Products Found by Selenium Webdriver. What's great here is
      * that you don't have to limit yourself only to firstProductPrice - if you want to test any other product on the list just pick it
-     * from the list by .get(). Of course I used here parsing and split methods, because Selenium Webdriver is getting only Text from whole
+     * from the list using .get(). Of course I used parsing and split methods here, because Selenium Webdriver is only getting Text from the whole
      * WebElement. I * 100 to gain value in GROSZ.
      *
-     * IMPORTANT! I thought that it will be much more interesting to compare WHOLE products found on EVERY page. I don't wanted to limit yourself
-     * only to single one page so I decided to compare firstProductPrice in GROSZ with TotalProductsFound.
-     * This test is building a list from first result page and the last one. First result page is * available products on single page and
+     * IMPORTANT! I thought that it will be much more interesting to compare WHOLE products found on EVERY page. I didn't want to limit yourself
+     * only to a single page so I decided to compare firstProductPrice in GROSZ with TotalProductsFound.
+     * This test builds a list from first result page and the last one. First result page is * available products on single page and
      * then - products from last one page.
      *
-     * I know that I understood this task too literally but I couldn't stop myself ;)
+     * I know that I understood this task too literally but I couldn't stop myself. ;)
      */
 
     public static void checkIfProductPriceIsLessThanQuantity() throws InterruptedException {
@@ -82,10 +82,10 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method assertResults before proper test will finalize it's assumptions. Why I did it? I like to print out on console
-     * log clear, easy to read feedback to developer.
-     * jUnit Framework doesn't provide this type of feedback very often. Additionally {@value #isProductPriceHigherThanQuantity}
-     * stores necessary value which is using in jUnit AssertTrue method.
+     * This method assertResults before proper test will finalize its assumptions. Why did I do it? I like to print out in console
+     * clear logs in console, a feedback that is easy to read for a developer.
+     * jUnit Framework doesn't provide this type of feedback very often. Additionally, {@value #isProductPriceHigherThanQuantity}
+     * stores necessary value which is used in jUnit AssertTrue method.
      */
 
     public static void assertResult() {

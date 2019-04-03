@@ -6,19 +6,19 @@
 
 # TC Examples can be find below:
 
-**Test Cases for Search Functionality**
+## Test Cases for Search Functionality
 
-Initial Conditions
+**Initial Conditions**
 
 1. Note down the valid input details for the search feature.
 
 2. Find out the minimum and maximum range.
 
-3. Find out the depth of the search – document search, word in a document, image search
+3. Find out the depth of the search – document search, word in a document, image search.
 
-4. Should document search display the size of the document also? Similarly for image?
+4. Should document search display the size of the document too? Similarly for image?
 
-5. Any advanced search features like document or image type selection to refine the search are available?
+5. Are any advanced search features like document or image type selection to refine the search available?
 
 6. General set of input which can be given are: 
 a). A-Z, 
@@ -27,17 +27,17 @@ c). 0-9,
 d). { [ ( ~ ! @ # $ % ^ & * ` | \ : ” ; ’ < > ? , . / * - + ) ] }, 
 e). Blank spaces
 
-Work with these inputs when testing the search functionality
+Work with these inputs when testing the search functionality.
 
-1. Special set of data which can be tried as input are
+1. Special set of data which can be tried as input are:
 
-a. 2 blank spaces – These should be trimmed and error message should be displayed
+a. 2 blank spaces – these should be trimmed and error message should be displayed,
 
-b. Blank spaces followed with special characters or numbers
+b. Blank spaces followed by special characters or numbers,
 
 c. Special set like a* should give the results for all characters starting with a.
 
-d. Enter any sql query like “Select * from hello;” without quotes and with quotes.
+d. Enter any SQL query like “Select * from hello;” without quotes and with quotes.
 
 e. Search for tags.
 
@@ -49,7 +49,7 @@ f. Search for hyperlinks should be performed.
 
 4. Any input data entered should return proper error message guiding to enter the correct input.
 
-5. Text in different panels of the page should be searched. For example if left panel of the web page contains menus and hyperlinks. Hyperlinks in that area should be searched properly. If menus are also in scope then they should also appear in the search results.
+5. Text in different panels of the page should be searched. For example, if left panel of the web page contains menus and hyperlinks, hyperlinks in that area should be searched properly. If menus are also in scope then they should also appear in the search results.
 
 6. Search response time should be checked.
 
@@ -57,11 +57,11 @@ f. Search for hyperlinks should be performed.
 
 8. Try searching in the page where a part of the page has form with Submit button.
 
-Search results testing
+**Search results testing**
 
-1. Check number of results in each page.
+1. Check number of results on each page.
 
-2. Check the count of the search results displayed in the page.
+2. Check the count of the search results displayed on the page.
 
 3. Check if the search results are displayed by popularity or most viewed or any other criteria mentioned in the requirements.
 
@@ -75,50 +75,50 @@ Search results testing
 
 8. Number of search results display and the count should also be tested.
 
-Test Scenarios for Result Grid
+**Test Scenarios for Result Grid**
 
-1. Page loading symbol should be displayed when it’s taking more than default time to load the result page
+1. Page loading symbol should be displayed when it’s taking more time than default to load the result page.
 
-2. Check if all search parameters are used to fetch data shown on result grid
+2. Check if all search parameters are used to fetch data shown on result grid.
 
-3. Total number of results should be displayed on result grid
+3. Total number of results should be displayed on result grid.
 
-4. Search criteria used for searching should be displayed on result grid
+4. Search criteria used for searching should be displayed on result grid.
 
 5. Result grid values should be sorted by default column.
 
-6. Sorted columns should be displayed with sorting icon
+6. Sorted columns should be displayed with sorting icon.
 
-7. Result grids should include all specified columns with correct values
+7. Result grids should include all specified columns with correct values.
 
-8. Ascending and descending sorting functionality should work for columns supported with data sorting
+8. Ascending and descending sorting functionality should work for columns supported with data sorting.
 
-9. Result grids should be displayed with proper column and row spacing
+9. Result grids should be displayed with proper column and row spacing.
 
-10. Pagination should be enabled when there are more results than the default result count per page
+10. Pagination should be enabled when there are more results than the default result count per page.
 
-11. Check for Next, Previous, First and Last page pagination functionality
+11. Check for Next, Previous, First and Last page pagination functionality.
 
-12. Duplicate records should not be displayed in result grid
+12. Duplicate records should not be displayed in result grid.
 
-13. Check if all columns are visible and horizontal scroll bar is enabled if necessary
+13. Check if all columns are visible and horizontal scroll bar is enabled if necessary.
 
-14. Check data for dynamic columns (columns whose values are calculated dynamically based on the other column values)
+14. Check data for dynamic columns (columns which values are calculated dynamically based on the other column values).
 
-15. For result grids showing reports check ‘Totals’ row and verify total for every column
+15. For result grids showing reports, check ‘Totals’ row and verify total for every column.
 
-16. For result grids showing reports check ‘Totals’ row data when pagination is enabled and user navigates to next page
+16. For result grids showing reports, check ‘Totals’ row data when pagination is enabled and user navigates to next page.
 
-17. Check if proper symbols are used for displaying column values e.g. % symbol should be displayed for percentage calculation
+17. Check if proper symbols are used for displaying column values, e.g. % symbol should be displayed for percentage calculation.
 
-18. Check result grid data if date range is enabled
+18. Check result grid data if date range is enabled.
 #
 
-**Test Cases for Sort Functionality**
+## Test Cases for Sort Functionality
 
-Purpose
+**Purpose**
 
-This basic testcase if designed to verify that the result sorting feature works properly.
+This basic test case is designed to verify that the result sorting feature works properly.
 
 **Initial Conditions**
 
@@ -126,18 +126,18 @@ Search for some item on tested page and wait for results.
 
 **Steps**
 
-1. Step: Click on SortDropDownMenu and pick "Cena rosnąco"
+1. Step: Click on SortDropDownMenu and pick "Cena rosnąco".
 
-Expected Results: The results products should sort into Price Ascending order
+Expected Results: The results products should sort into Price Ascending order.
 
-2. Step: Click on SortDropDownMenu and pick "Cena malejąco"
+2. Step: Click on SortDropDownMenu and pick "Cena malejąco".
 
-Expected Results: The results products should sort into Price Descending order
+Expected Results: The results products should sort into Price Descending order.
 
-3. Step: Click on SortDropDownMenu and pick "Cena z dostawą rosnąco"
+3. Step: Click on SortDropDownMenu and pick "Cena z dostawą rosnąco".
 
-Expected Results: The results products should sort into Price with Delivery Ascending order
+Expected Results: The results products should sort into Price with Delivery Ascending order.
 
-4. Step: Click on SortDropDownMenu and pick "Cena z dostawą malejąco"
+4. Step: Click on SortDropDownMenu and pick "Cena z dostawą malejąco".
 
-Expected Results: The results products should sort into Price with Delivery Descending order
+Expected Results: The results products should sort into Price with Delivery Descending order.
