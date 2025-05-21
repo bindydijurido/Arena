@@ -12,7 +12,7 @@ public class SearchEngineTest extends CommonUseMethodsAndActions {
     /**
      * This is Task 1 and 2 Test.
      * Important! - check how this test works especially here:
-     * @see SearchEngineActions#checkIfProductPriceIsLessThanQuantity()
+     * @see SearchEngineActions#checkIfFirstProductPriceIsHigherThanTotalProducts()
      *
      * I assumed, that Task 1 is covering with Task 2 - that's why I decided to split those two into one test method.
      * If you want to test Task 1 only just use first two methods in //When section.
@@ -29,6 +29,8 @@ public class SearchEngineTest extends CommonUseMethodsAndActions {
         //Given
         String productName = "rower"; // Test will search results based on this word - type anything you want here
         int productNumber = 0; // Pick any product from the list you want but please remember about list.size()
+        // For broader test coverage, consider parameterizing 'productName' and 'productNumber'
+        // using JUnit 5 ParameterizedTests or reading data from an external source (e.g., CSV, JSON).
 
         //When
         openArenaPage();
@@ -36,7 +38,7 @@ public class SearchEngineTest extends CommonUseMethodsAndActions {
         displayProductName(productNumber);
         displayProductPrice(productNumber);
         displayProductsQuantity();
-        checkIfProductPriceIsLessThanQuantity();
+        checkIfFirstProductPriceIsHigherThanTotalProducts();
         assertResult();
 
         //Finalize

@@ -11,4 +11,5 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.4.0'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.4.0'
     testCompile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    testCompile 'io.github.bonigarcia:webdrivermanager:5.8.0'
 }

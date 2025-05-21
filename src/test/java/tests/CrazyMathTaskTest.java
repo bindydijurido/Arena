@@ -23,6 +23,8 @@ public class CrazyMathTaskTest extends CommonUseMethodsAndActions {
         String productName = "audi"; // Test will search results based on this word - type anything you want here
         int firstPrice = 500; // You can put here any value you want but please remember that this test has its assumptions
         int endPrice = 721;  // You can put here any value you want but please remember that this test has its assumptions
+        // To test a wider range of scenarios, 'productName', 'firstPrice', and 'endPrice'
+        // could be parameterized using JUnit 5 ParameterizedTests or supplied by a data provider.
 
         //When
         openArenaPage();
