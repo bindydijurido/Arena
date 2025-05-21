@@ -1,13 +1,21 @@
 package search_engine;
 
 import common_methods.CommonUseMethodsAndActions;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 import static search_engine.SearchEngineLocators.*;
 
 public class SearchEngineActions extends CommonUseMethodsAndActions {
 
+    // Note: Using static variables like 'isProductPriceHigherThanQuantity' and 'productsOnFirstPage'
+    // can lead to issues in test automation, especially if tests are run in parallel or if test class
+    // instances are reused. Static state can persist across tests, leading to unexpected behavior
+    // or flaky tests. Consider refactoring these to be instance variables, or manage state
+    // via method parameters and return values for better test isolation in the future.
     public static boolean isProductPriceHigherThanQuantity = false;
     private static int productsOnFirstPage = 0;
 
@@ -45,7 +53,7 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
     }
 
     /**
-     * This method is checking if Product Price in GROSZ is less than Total Products Found by Selenium Webdriver. What's great here is
+     * This method is checking if the first Product's Price (in GROSZ) is greater than the Total Products Found by Selenium Webdriver. What's great here is
      * that you don't have to limit yourself only to firstProductPrice - if you want to test any other product on the list just pick it
      * from the list by .get(). Of course I used here parsing and split methods, because Selenium Webdriver is getting only Text from whole
      * WebElement. I * 100 to gain value in GROSZ.
@@ -58,7 +66,7 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
      * I know that I understood this task too literally but I couldn't stop myself ;)
      */
 
-    public static void checkIfProductPriceIsLessThanQuantity() throws InterruptedException {
+    public static void checkIfFirstProductPriceIsHigherThanTotalProducts() throws InterruptedException {
         int totalPagesFound = Integer.parseInt(let(numberFoundPages()).getText().split(" ")[1]);
         int firstProductPrice = (int) Double
                 .parseDouble(viewProductPriceList()
@@ -66,9 +74,17 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
                         .getText()
                         .split(" ")[0]) * 100;
 
+        List<WebElement> productsBeforePagination = viewProductNameList();
+
         let(paginationInput()).clear();
         let(paginationInput()).sendKeys(String.valueOf(totalPagesFound));
-        TimeUnit.SECONDS.sleep(1);
+
+        if (!productsBeforePagination.isEmpty()) {
+            WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
+            wait.until(ExpectedConditions.stalenessOf(productsBeforePagination.get(0)));
+        }
+        // Consider adding an else block here if productsBeforePagination could be empty
+        // and a different wait condition is needed. For now, proceeding as per instructions.
 
         int totalProductsFound = (totalPagesFound * productsOnFirstPage) - viewProductNameList().size();
 
@@ -85,7 +101,8 @@ public class SearchEngineActions extends CommonUseMethodsAndActions {
      * This method assertResults before proper test will finalize it's assumptions. Why I did it? I like to print out on console
      * log clear, easy to read feedback to developer.
      * jUnit Framework doesn't provide this type of feedback very often. Additionally {@value #isProductPriceHigherThanQuantity}
-     * stores necessary value which is using in jUnit AssertTrue method.
+     * stores necessary value which is using in jUnit AssertTrue method. This method confirms if the first product's price is higher
+     * than the total number of products.
      */
 
     public static void assertResult() {

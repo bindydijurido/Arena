@@ -1,31 +1,28 @@
-# ArenaTask Automation Tests 
-Web automated test with java+selenium+webdriver+jUnit
+# ArenaTask Automation Tests
+This project contains web automation tests for the Arena.pl website, implemented using Java, Selenium WebDriver, and JUnit. It demonstrates automated testing for functionalities such as product search and specific data verification tasks.
+
+## Key Features & Structure
+*   **Language/Framework:** Java, JUnit 4
+*   **Browser Automation:** Selenium WebDriver
+*   **Test Design:** The tests follow a Page Object Model-like pattern, with actions encapsulated in separate classes (`SearchEngineActions`, `MathTaskActions`) for better maintainability. Common utility methods are stored in `CommonUseMethodsAndActions`.
+*   **Driver Management:** WebDriverManager is used for automatic browser driver (ChromeDriver) setup.
 
 # Go directly to Tests
 https://github.com/bindydijurido/Arena/tree/master/src/test/java/tests
 # 
 
-# Hello guys!
+# Technical Stack
 
-In this repository I am using several libraries and tools:
+This project utilizes the following libraries and tools:
 
-- Java SE Development Kit 8 - jdk8u131 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-- Selenium Webdriver JAVA 3.4.0 - http://www.seleniumhq.org/download/
-- Selenium StandAlone Server 3.4.0 - http://www.seleniumhq.org/download/
-- jUnit 4.12 - https://mvnrepository.com/artifact/junit/junit/4.12
-- chromedriver for Chrome Browser - http://chromedriver.chromium.org
-- IntelliJ Community 2018.3 - https://www.jetbrains.com/idea/?fromMenu
+*   **Java SE Development Kit 8:** [http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+*   **Selenium WebDriver (Java Bindings, e.g., v3.4.0):** [http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/) - _WebDriver browser drivers are managed automatically by WebDriverManager._
+*   **Selenium StandAlone Server (e.g., v3.4.0):** [http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/) - _May be needed for advanced Selenium Grid configurations, but not required for running tests locally with this setup._
+*   **JUnit 4.12:** [https://mvnrepository.com/artifact/junit/junit/4.12](https://mvnrepository.com/artifact/junit/junit/4.12)
+*   **WebDriverManager:** Integrated via Gradle to manage browser driver binaries automatically. This project uses WebDriverManager to automatically handle browser driver (e.g., ChromeDriver) downloads and setup, so manual configuration is no longer needed.
+*   **IDE:** IntelliJ Community 2018.3 (or any other Java IDE)
 
-You can download everything manually as a zip file and open a project or simply import this repository. 
-Don't worry about libraries - everything is in gradle : ) 
-#
-
-# Important!
-**!Please remember to adapt your OS System and Browser here:**
-https://github.com/bindydijurido/Arena/blob/master/src/test/java/driver/Root.java
-
-**!Please remember to place your Chrome Webdriver into libs section:**
-https://github.com/bindydijurido/Arena/tree/master/libs
+Dependencies are managed via Gradle.
 #
 
 **Enjoy and feel free to comment everything you want :)**
